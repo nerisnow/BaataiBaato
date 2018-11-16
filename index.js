@@ -5,6 +5,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmlyaXNoYSIsImEiOiJjam9jdzI0eXkwMjFnM3FzNm0zN
       center: [85.3150,27.6760], // starting position [lng, lat]
       zoom: 15 // starting zoom
   });
+  map.addControl(new mapboxgl.FullscreenControl());
 //   map.on('load', function(e) {
 // map.addLayer({
 //   id: 'locations',
