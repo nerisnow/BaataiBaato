@@ -11,11 +11,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmlyaXNoYSIsImEiOiJjam9jdzI0eXkwMjFnM3FzNm0zN
       enableHighAccuracy: true
   },
   trackUserLocation: true
-}));
+}), 'bottom-right');
 
   map.addControl(new MapboxDirections({
     accessToken: mapboxgl.accessToken
-}), 'top-left');
+}));
 
 var stores={
 "type": "FeatureCollection",
@@ -668,33 +668,6 @@ map.addLayer({
 
 });
 
-map.on('load', function() {
-getRoute();
-// geolocate.trigger();
-});
-
-
-// map.addControl(new mapboxgl.GeolocateControl({
-//   positionOptions: {
-//       enableHighAccuracy: true
-//   },
-//   trackUserLocation: true
-// },function(e){
-//   var lon= e.coords.longitude;
-//   var lat= e.coords.latitude;
-//   var position= [lon,lat];
-// } ));
-// window.alert(lon);
-
-
-// map.addControl(new mapboxgl.GeolocateControl({
-//   positionOptions: {
-//       enableHighAccuracy: true
-//   },
-//   trackUserLocation: true
-// }));
-
-
 function getRoute() {
 var start = [lon, lat];
 var end = [85.3169,27.6782];
@@ -718,7 +691,6 @@ $.ajax({
       'line-width': 2
     }
   });
-  // this is where the code from the next step will go
 });
 }
 
